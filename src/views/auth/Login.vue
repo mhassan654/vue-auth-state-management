@@ -1,36 +1,41 @@
 <template>
   <div class="row">
     <div class="col-lg-8 m-auto">
-      <card :title="$t('login')">
-        <form @submit.prevent="login" @keydown="form.onKeydown($event)">
-          <!-- Email -->
-          <div class="form-group row">
-            <label for="email" class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.email" id="email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
+
+
+<div class="card" :title="$t('login')">
+<article class="card-body">
+<a href="" class="float-right btn btn-outline-primary">
+   <router-link :to="{ name: 'register' }">
+              {{ $t('register') }}
+            </router-link>
+</a>
+<h4 class="card-title mb-4 mt-1">Sign in</h4>
+	 <form @submit.prevent="login" @keydown="form.onKeydown($event)">
+    <div class="form-group">
+    	<label>Your email</label>
+       <input v-model="form.email" id="email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
               <has-error :form="form" field="email" />
-            </div>
-          </div>
-
-          <!-- Password -->
-          <div class="form-group row">
-            <label for="password" class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.password" id="password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
+    </div> <!-- form-group// -->
+    <div class="form-group">
+    	<a class="float-right" href="#">Forgot?</a>
+    	<label>Your password</label>
+        <input v-model="form.password" id="password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
               <has-error :form="form" field="password" />
-            </div>
-          </div>
+    </div> <!-- form-group// -->
+    <div class="form-group">
+    <div class="checkbox">
+      <label> <input type="checkbox" name="remember_me"> Save password </label>
+    </div> <!-- checkbox .// -->
+    </div> <!-- form-group// -->
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block" :disabled="form.busy"> {{ $t('login') }}  </button>
+    </div> <!-- form-group// -->
+</form>
+</article>
+</div>
 
-          <div class="form-group row">
-            <div class="col-md-7 offset-md-3 d-flex">
-              <!-- Submit Button -->
-              <button type="submit" class="btn btn-primary" :disabled="form.busy">
-                {{ $t('login') }}
-              </button>
-            </div>
-          </div>
-        </form>
-      </card>
+
     </div>
   </div>
 </template>
