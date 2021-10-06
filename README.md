@@ -14,23 +14,27 @@
 </p>
 
 ## Features
-- Ready using Backend API Laravel 6 (Long-term support/LTS) https://github.com/cleancode-id/laravel6-api-boilerplate
+
+- Ready using Backend API Laravel 6 (Long-term support/LTS) https://github.com/mhassan654/laravel6-vue-boilerplate
 - Optimized for Frontend (basic UI/views, minimum dependencies, no bloatware)
 - Authentication with JWT
 - Basic Features: Register, Login, Forgot Password, Update Profile & Password
 - Latest Vue.js with support Vue CLI 3, vuex, vue-router, vue-meta, vue-i18n, etc.
 - Unit & Feature Test
 - Standard Coding Style & Clean Code
- 
+
 ## Installation
-- Download [latest release](https://github.com/cleancode-id/laravel6-frontend-boilerplate/releases) or clone this repository.
+
+- Download [latest release](https://github.com/mhassan654/vue-auth-state-management) or clone this repository.
 - Edit `vue.config.js` and set API backend dev-server if necessary
 - Run `npm install`
 
 ## Usage
+
 - Run `npm run serve` or `npm run build`
 - Run `npm run lint`
 - Run `npm run test:unit`
 
 ## Credits
-- Inspired from https://github.com/cretueusebiu/laravel-vue-spa
+
+- Inspired from https://github.com/mhassan654/laravel6-vue-boilerplate
